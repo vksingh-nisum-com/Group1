@@ -23,7 +23,7 @@ public class AddController {
 	
 	@RequestMapping("/add")
 	public void add(HttpServletRequest request,HttpServletResponse response) throws IOException{
-		System.out.println("hiiiiiii");
+		System.out.println("hi");
 		
 	}
 
