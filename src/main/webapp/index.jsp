@@ -11,12 +11,10 @@
 <form action="add" method="get">
   Hello world.............!!!!!!!!
   <input type="text">
-  <button type="button">submit</button>
   
+  <button type="submit">submit</button> 
+   
   </form>
-
-
-
 </body>
 </html>
     

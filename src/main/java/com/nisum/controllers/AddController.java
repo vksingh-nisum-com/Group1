@@ -1,4 +1,4 @@
-package com.nisum.controller;
+package com.nisum.controllers;
 
 
 import java.io.IOException;
@@ -23,6 +23,7 @@ public class AddController {
 	
 	@RequestMapping("/add")
 	public void add(HttpServletRequest request,HttpServletResponse response) throws IOException{
+		System.out.println("hiiiiiii");
 		
 	}
 
