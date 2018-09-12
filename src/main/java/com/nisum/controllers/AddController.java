@@ -26,6 +26,8 @@ public class AddController {
 		System.out.println("hi");
 		System.out.println("hellooooo");
 		System.out.println("welcome");
+		System.out.println("check");
+
 		
 	}
 
