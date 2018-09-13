@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.nisum.dao.User" table="USER">
+		<id name="id" type="int" column="ID">
+			<generator class="assigned" />
+		</id>
+		<property name="fullName">
+			<column name="FULLNAME" />
+		</property>		
+		<property name="userName">
+			<column name="USERNAME" />
+		</property>
+		<property name="password">
+			<column name="PASSWORD"/>
+		</property>
+		<property name="email" >
+			<column name="EMAIL" />
+		</property>
+		<property name="phone" >
+			<column name="PHONE" />
+		</property>
+		
+	</class>
+</hibernate-mapping>
