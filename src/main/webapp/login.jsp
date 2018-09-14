@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" isELIgnored="false" %>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -37,6 +37,98 @@
         <script src="resources/https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="resources/https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+       
+
+        <script>
+
+        function checkpattern(ram){
+            var patcheck = new RegExp("^[a-zA-Z]{3,10}$");
+                var patcheckmob = new RegExp("^[7-9][0-9]{9}$");
+                var pattern1= new RegExp("^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$");
+
+
+           if(ram.id=="full" && ram.value!=0){
+            if(!patcheck.test(ram.value))
+            {
+                document.getElementById("div1").innerHTML="* firstname is not correct";
+                document.getElementById("div1").style.color="Red";
+                return false;
+            }
+             else
+            {
+                document.getElementById("div1").innerHTML="";
+                return true;
+            }
+        }
+           else if(ram.id=="email" && ram.value!=0){
+               if(!pattern1.test(ram.value))
+                   {
+                       document.getElementById("div2").innerHTML="Enter a correct emailid";
+                       document.getElementById("div2").style.color="Red";
+                       
+                   }
+                    else
+                   {
+                       document.getElementById("div2").innerHTML="";
+                   }
+
+               }
+        else if(ram.id=="user" && ram.value!=0){
+            if(!patcheck.test(ram.value))
+            {
+                document.getElementById("div3").innerHTML="* Lastname last name is not correct";
+                document.getElementById("div3").style.color="Red";
+                
+            }
+             else
+            {
+                document.getElementById("div3").innerHTML="";
+            }
+        }
+
+        else if(ram.id=="phone"){
+        if(!patcheckmob.test(ram.value)&&ram.value!=0)
+            {
+                document.getElementById("div4").innerHTML="Enter a correct mobileno";
+                document.getElementById("div4").style.color="Red";
+                
+            }
+             else
+            {
+                document.getElementById("div4").innerHTML="";
+            }
+
+        }
+        
+        }
+        function validate(form){
+        if(form.full.value==""){
+        document.getElementById("div1").innerHTML="*FullName cant be empty";
+                document.getElementById("div1").style.color="Red";
+        return false;
+        }
+        else if(form.email.value==""){
+            document.getElementById("div2").innerHTML="*Email cant be empty";
+                    document.getElementById("div2").style.color="Red";
+            return false;
+            }
+        else if(form.user.value==""){
+        document.getElementById("div3").innerHTML="*Username cant be empty";
+                document.getElementById("div3").style.color="Red";
+        return false;
+        }
+        else if(form.phone.value==""){
+        document.getElementById("div4").innerHTML="*Mobile cant be empty";
+                document.getElementById("div4").style.color="Red";
+        return false;
+        }
+
+        else{
+        return true;
+        }
+        }
+
+        </script>
     </head>
     <body>
         
@@ -90,8 +182,8 @@
                                 
                             </li>
                             <li class="nav-item dropdown submenu">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Signup
-
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Signup
                                 </a>
                                 
                             </li>
@@ -103,7 +195,7 @@
                             </li>
                             
                             
-                            <li class="nav-item"><a class="nav-link" href="resources/contact.html">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.jsp">Contact</a></li>
                         </ul>
                     </div>
                     </nav>
@@ -116,7 +208,7 @@
         <section class="solid_banner_area">
             <div class="container">
                 <div class="solid_banner_inner">
-                    <h3>LOgin</h3>
+                    <h3>Login</h3>
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="resources/track.html">Login</a></li>
@@ -134,13 +226,14 @@
                         <div class="col-lg-4">
                             <div class="login_title">
                                 <h2>log in your account</h2>
+                                <h6 style="color:red"> ${ loginMessage } </h6>
                             </div>
-                            <form class="login_form row">
+                            <form class="login_form row" onsubmit="return validate(this)" action="loginProcess" method="get">
                                 <div class="col-lg-12 form-group">
-                                    <input class="form-control" type="email" placeholder="UserName" name="loginUsername">
+                                    <input class="form-control" type="email" placeholder="UserName" id="user1" name="loginUsername">
                                 </div>
                                 <div class="col-lg-12 form-group">
-                                    <input class="form-control" type="password" placeholder="Password" name="loginPassword">
+                                    <input class="form-control" type="password" placeholder="Password" id="Password" name="loginPassword">
                                 </div>
                                 <div class="col-lg-12 form-group">
                                     <div class="creat_account">
@@ -158,29 +251,36 @@
                         <div class="col-lg-8">
                             <div class="login_title">
                                 <h2>create account</h2>
+                                <h5 style="color:red"> ${ registeringStatus } </h5>
                                 <p>Please fill the Details and remember the password</p>
                             </div>
-                            <form class="login_form row" action="registerProcess" method="get">
+                            <form class="login_form row" onsubmit="return validate(this)"  action="registerProcess" method="get">
                                 <div class="col-lg-6 form-group">
-                                    <input class="form-control" type="text" placeholder="Full Name" name="R_name">
+                                    <input class="form-control" type="text" onkeyup="return checkpattern(this)" placeholder="Full Name" id="full" name="R_name">
                                 </div>
+                                <div id="div1"></div>
+                                <div class=" col-lg-6 form-group">
+                                    <input class="form-control" type="text" onkeyup="return checkpattern(this)" placeholder="Email" id="email"name="R_email">
+                                </div>      
+                                <div id="div2"></div>                    
                                 <div class="col-lg-6 form-group">
-                                    <input class="form-control" type="email" placeholder="Email" name="R_email">
+                                    <input class="form-control" type="text" onkeyup="return checkpattern(this)" placeholder="User Name" id="user" name="R_username">
                                 </div>
-                                <div class="col-lg-6 form-group">
-                                    <input class="form-control" type="text" placeholder="User Name" name="R_username">
+                                <div id="div3"></div>
+                                <div class="col-lg-6  form-group">
+                                    <input class="form-control" type="text" onkeyup="return checkpattern(this)" placeholder="Phone" id="phone"name="R_phone">
                                 </div>
-                                <div class="col-lg-6 form-group">
-                                    <input class="form-control" type="text" placeholder="Phone" name="R_phone">
+                                <div id="div4"></div>
+                                <div class=" col-lg-6 form-group">
+                                    <input class="form-control" type="password" onkeyup="return checkpattern(this)" placeholder="Password"id="pass" name="R_password">
                                 </div>
+                                <div id="div5"></div>
                                 <div class="col-lg-6 form-group">
-                                    <input class="form-control" type="password" placeholder="Password" name="R_password">
+                                    <input class="form-control" type="password" onkeyup="return checkpattern(this)"placeholder="Re-Password" id="re-pass"name="R_repassword">
                                 </div>
+                                <div id="div6"></div>
                                 <div class="col-lg-6 form-group">
-                                    <input class="form-control" type="password" placeholder="Re-Password" name="R_repassword">
-                                </div>
-                                <div class="col-lg-6 form-group">
-                                    <button type="submit" value="submit" class="btn subs_btn form-control">register now</button>
+                                    <button type="submit" value="submit" class="btn subs_btn form-control">Register now</button>
                                 </div>
                             </form>
                         </div>

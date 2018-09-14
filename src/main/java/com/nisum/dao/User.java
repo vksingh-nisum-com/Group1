@@ -1,13 +1,21 @@
 package com.nisum.dao;
-
+import javax.persistence.*;
+@Entity
+@Table(name = "user")
 public class User {
-	
+	@Id @GeneratedValue
+	@Column(name = "ID")
 	private int id;
+	@Column(name = "FULLNAME")
 	private String fullName;
+	@Column(name = "USERNAME")
 	private String userName;
+	@Column(name = "PASSWORD")
 	private  String password;
-	private String rePassword;
+	
+	@Column(name = "EMAIL")
 	private String email;
+	@Column(name = "PHONE")
 	private String phone;
 	public int getId() {
 		return id;
@@ -32,12 +40,6 @@ public class User {
 	}
 	public void setPassword(String password) {
 		this.password = password;
-	}
-	public String getRePassword() {
-		return rePassword;
-	}
-	public void setRePassword(String rePassword) {
-		this.rePassword = rePassword;
 	}
 	public String getEmail() {
 		return email;

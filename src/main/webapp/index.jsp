@@ -84,8 +84,8 @@
                                 <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
                             </ul>
                             <ul class="top_right">
-                                <li class="user"><a href="#"><i class="icon-user icons"></i></a></li>
-                                <li class="cart"><a href="#"><i class="icon-handbag icons"></i></a></li>
+                                <li class="user"><a href="login.jsp"><i class="icon-user icons"></i></a></li>
+                                <li class="cart"><a href="empty-cart.jsp"><i class="icon-handbag icons"></i></a></li>
                                 <li class="h_price">
                                     <select class="selectpicker">
                                         <option>$0.00</option>
@@ -113,10 +113,11 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav categories">
                             <li class="nav-item">
-                                <select class="selectpicker" >
-                                  <option > <a href="#" >Catagories</a></option>
-                                    <option><a href="sports.jsp" >Electronics</a></option>
-                                    <option><a href="sports.jsp" >sports</a></option>
+                                <select class="selectpicker" onchange="location = this.value;" >
+                                <option value="index.jsp" >Categories</option>
+                                  <option value="#" >Fashion</option>
+                                   <option value="compare.jsp">Electronics</option>
+                                    <option value="sports.jsp">sports</option>
                                 </select>
                             </li>
                         </ul>
@@ -141,7 +142,7 @@
                             </li>
                             
                             
-                            <li class="nav-item"><a class="nav-link" href="resources/contact.html">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.jsp">Contact</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -794,14 +795,13 @@
                         <div class="col-lg-2 col-md-4 col-6">
                             <aside class="f_widget link_widget f_service_widget">
                                 <div class="f_w_title">
-                                    <h3>Customer Service</h3>
+                                    <h3>Connect with Us</h3>
                                 </div>
                                 <ul>
-                                    <li><a href="#">My account</a></li>
-                                    <li><a href="#">Ordr History</a></li>
-                                    <li><a href="#">Wish List</a></li>
-                                    <li><a href="#">Newsletter</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="https://www.facebook.com/">Facebook</a></li>
+                                    <li><a href="https://twitter.com/">Twitter</a></li>
+                                    <li><a href="https://www.instagram.com/?hl=en">Instagram</a></li>
+                   
                                 </ul>
                             </aside>
                         </div>

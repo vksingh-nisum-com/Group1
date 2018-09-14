@@ -12,7 +12,7 @@
         
         <link rel="icon" href="resources/img/fav-icon.png" type="image/x-icon" />
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Persuit</title>
+        <title>Amazon</title>
 
         <!-- Icon css link -->
         <link href="resources/css/font-awesome.min.css" rel="stylesheet">
@@ -40,6 +40,93 @@
         <script src="resources/https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="resources/https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <script>
+
+function checkpattern(ram){
+    var patcheck = new RegExp("^[a-zA-Z]{3,10}$");
+        var patcheckmob = new RegExp("^[7-9][0-9]{9}$");
+        var pattern1= new RegExp("^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$");
+
+
+   if(ram.id=="name" && ram.value!=0){
+    if(!patcheck.test(ram.value))
+    {
+        document.getElementById("div1").innerHTML="* firstname is not correct";
+        document.getElementById("div1").style.color="Red";
+        return false;
+    }
+     else
+    {
+        document.getElementById("div1").innerHTML="";
+        return true;
+    }
+}
+else if(ram.id=="last" && ram.value!=0){
+    if(!patcheck.test(ram.value))
+    {
+        document.getElementById("div2").innerHTML="* Lastname last name is not correct";
+        document.getElementById("div2").style.color="Red";
+        
+    }
+     else
+    {
+        document.getElementById("div2").innerHTML="";
+    }
+}
+else if(ram.id=="email" && ram.value!=0){
+	if(!pattern1.test(ram.value))
+	    {
+	        document.getElementById("div3").innerHTML="Enter a correct emailid";
+	        document.getElementById("div3").style.color="Red";
+	        
+	    }
+	     else
+	    {
+	        document.getElementById("div3").innerHTML="";
+	    }
+
+	}
+else if(ram.id=="phone"){
+if(!patcheckmob.test(ram.value)&&ram.value!=0)
+    {
+        document.getElementById("div4").innerHTML="Enter a correct mobileno";
+        document.getElementById("div4").style.color="Red";
+        
+    }
+     else
+    {
+        document.getElementById("div4").innerHTML="";
+    }
+
+}
+
+}
+function validate(form){
+if(form.name.value==""){
+document.getElementById("div1").innerHTML="*Firstname cant be empty";
+        document.getElementById("div1").style.color="Red";
+return false;
+}
+else if(form.last.value==""){
+document.getElementById("div2").innerHTML="*Lastname cant be empty";
+        document.getElementById("div2").style.color="Red";
+return false;
+}
+else if(form.email.value==""){
+	document.getElementById("div3").innerHTML="*Email cant be empty";
+	        document.getElementById("div3").style.color="Red";
+	return false;
+	}
+else if(form.phone.value==""){
+document.getElementById("div4").innerHTML="*Mobile nocant be empty";
+        document.getElementById("div4").style.color="Red";
+return false;
+}
+else{
+return true;
+}
+}
+</script>
     </head>
     <body>
         
@@ -86,53 +173,24 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item dropdown submenu">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    <a class="nav-link dropdown-toggle" href="index.jsp">
+                                    Home 
                                     </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a class="nav-link" href="resources/index.html">Home Simple</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/home-carousel.html">Home Carousel</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/home-fullwidth.html">Home Full Width</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/home-parallax.html">Home Parallax</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/home-sidebar.html">Home Boxed</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/home-fixed-menu.html">Home Fixed</a></li>
-                                    </ul>
+                                   
                                 </li>
                                 <li class="nav-item dropdown submenu active">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Pages <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    <a class="nav-link dropdown-toggle" href="login.jsp">
+                                    Signup 
                                     </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a class="nav-link" href="resources/compare.html">Compare</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/checkout.html">Checkout Method</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/register.html">Checkout Register</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/track.html">Track</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/login.html">Login</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/404.html">404</a></li>
-                                    </ul>
+                                    
                                 </li>
                                 <li class="nav-item dropdown submenu">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Shop <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a class="nav-link" href="resources/categories-no-sidebar-2column.html">Prodcut No Sidebar</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/categories-no-sidebar-3column.html">Prodcut Two Column</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/categories-no-sidebar-4column.html">Product Grid</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/categories-left-sidebar.html">Categories Left Sidebar</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/categories-right-sidebar.html">Categories Right Sidebar</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/categories-grid-left-sidebar.html">Categories Grid Sidebar</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/product-details.html">Prodcut Details 01</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/product-details2.html">Prodcut Details 02</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/product-details3.html">Prodcut Details 03</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/shopping-cart.html">Shopping Cart 01</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/shopping-cart2.html">Shopping Cart 02</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/empty-cart.html">Empty Cart</a></li>
-                                    </ul>
+                                    <a class="nav-link dropdown-toggle" href="login.jsp" >
+                                    Login 
+                                    </a>                             
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">lookbook</a></li>
-                                <li class="nav-item"><a class="nav-link" href="resources/contact.html">Contact</a></li>
+                               
+                                <li class="nav-item"><a class="nav-link" href="contact.jsp">Contact</a></li>
                             </ul>
                             <ul class="navbar-nav justify-content-end">
                                 <li class="search_icon"><a href="#"><i class="icon-magnifier icons"></i></a></li>
@@ -167,46 +225,31 @@
                     <div class="row">
                         <div class="col-lg-7">
                             <div class="billing_details">
-                                <h2 class="reg_title">Billing Detail</h2>
-                                <form class="billing_inner row">
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label for="cun">Country <span>*</span></label>
-                                            <select class="selectpicker" id="cun">
-                                                <option>United State America (USA)</option>
-                                                <option>Bangladesh (BAN)</option>
-                                                <option>United State America (USA)</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                                <h2 class="reg_title">Shipping Details</h2>
+                                <form class="billing_inner row" onsubmit="return validate(this)">
+                                    
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label for="name">First Name <span>*</span></label>
-                                            <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="">
+                                            <input type="text"  onkeyup="return checkpattern(this)" class="form-control" id="name" aria-describedby="name" placeholder="">
                                         </div>
+                                        <div id="div1"></div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label for="last">Last Name <span>*</span></label>
-                                            <input type="text" class="form-control" id="last" aria-describedby="last">
+                                            <input type="text"  onkeyup="return checkpattern(this)" class="form-control" id="last" aria-describedby="last">
                                         </div>
+                                        <div id="div2"></div>
                                     </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label for="cname">Company Name <span>*</span></label>
-                                            <select class="selectpicker" id="cname">
-                                                <option>United State America (USA)</option>
-                                                <option>Bangladesh (BAN)</option>
-                                                <option>United State America (USA)</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                                 
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label for="address">Address <span>*</span></label>
                                             <input type="text" class="form-control" id="address" aria-describedby="address">
                                             <input type="text" class="form-control" id="address2" aria-describedby="address">
                                         </div>
+                                        
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-group">
@@ -214,71 +257,28 @@
                                             <select class="selectpicker" id="ctown">
                                                 <option>United State America (USA)</option>
                                                 <option>Bangladesh (BAN)</option>
-                                                <option>United State America (USA)</option>
+                                                <option>India (IND)</option>
                                             </select>
                                         </div>
+                                       
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label for="email">Email <span>*</span></label>
-                                            <input type="email" class="form-control" id="email" aria-describedby="email">
+                                            <input type="text"  onkeyup="return checkpattern(this)" class="form-control" id="email" aria-describedby="email">
                                         </div>
+                                        <div id="div3"></div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label for="phone">Phone <span>*</span></label>
-                                            <input type="text" class="form-control" id="phone" aria-describedby="phone">
+                                            <input type="text"  onkeyup="return checkpattern(this)" class="form-control" id="phone" aria-describedby="phone">
                                         </div>
+                                        <div id="div4"></div>
                                     </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <div class="creat_account">
-                                                <input type="checkbox" id="f-option" name="selector">
-                                                <label for="f-option">Ship to a different address?</label>
-                                                <div class="check"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label for="cunt">Country <span>*</span></label>
-                                            <select class="selectpicker" id="cunt">
-                                                <option>United State America (USA)</option>
-                                                <option>Bangladesh (BAN)</option>
-                                                <option>United State America (USA)</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label for="name2">First Name <span>*</span></label>
-                                            <input type="text" class="form-control" id="name2" aria-describedby="name2" placeholder="">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label for="last2">Last Name <span>*</span></label>
-                                            <input type="text" class="form-control" id="last2" aria-describedby="last2">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label for="company">Company Name <span>*</span></label>
-                                            <input type="text" class="form-control" id="company" aria-describedby="company">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label for="city">City / Town <span>*</span></label>
-                                            <input type="text" class="form-control" id="city" aria-describedby="city">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label for="order">Order Notes <span>*</span></label>
-                                            <textarea class="form-control" id="order" rows="3"></textarea>
-                                        </div>
-                                    </div>
+                                    
+                                   
+                                    
                                 </form>
                             </div>
                         </div>
@@ -369,7 +369,7 @@
                         <div class="col-lg-4 col-md-4 col-6">
                             <aside class="f_widget f_about_widget">
                                 <img src="resources/img/logo.png" alt="">
-                                <p>Persuit is a Premium PSD Template. Best choice for your online store. Let purchase it to enjoy now</p>
+                                <p>Amazon is a Premium PSD Template. Best choice for your online store. Let purchase it to enjoy now</p>
                                 <h6>Social:</h6>
                                 <ul>
                                     <li><a href="#"><i class="social_facebook"></i></a></li>
@@ -477,5 +477,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <script src="resources/vendors/jquery-ui/jquery-ui.js"></script>
         
         <script src="resources/js/theme.js"></script>
+        <script type="text/javascript" >
+	
     </body>
 </html>

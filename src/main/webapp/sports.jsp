@@ -83,52 +83,22 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item dropdown submenu">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    <a class="nav-link dropdown-toggle" href="index.jsp">
+                                    Home
                                     </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a class="nav-link" href="resources/index.html">Home Simple</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/home-carousel.html">Home Carousel</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/home-fullwidth.html">Home Full Width</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/home-parallax.html">Home Parallax</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/home-sidebar.html">Home Boxed</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/home-fixed-menu.html">Home Fixed</a></li>
-                                    </ul>
                                 </li>
                                 <li class="nav-item dropdown submenu">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Pages <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    <a class="nav-link dropdown-toggle" href="login.jsp">
+                                    Signup 
                                     </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a class="nav-link" href="resources/compare.html">Compare</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/checkout.html">Checkout Method</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/register.html">Checkout Register</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/track.html">Track</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/login.html">Login</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/404.html">404</a></li>
-                                    </ul>
+                                
                                 </li>
                                 <li class="nav-item dropdown submenu active">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Shop <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    <a class="nav-link dropdown-toggle" href="login.jsp" >
+                                    Login 
                                     </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a class="nav-link" href="resources/categories-no-sidebar-2column.html">Prodcut No Sidebar</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/categories-no-sidebar-3column.html">Prodcut Two Column</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/categories-no-sidebar-4column.html">Product Grid</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/categories-left-sidebar.html">Categories Left Sidebar</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/categories-right-sidebar.html">Categories Right Sidebar</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/categories-grid-left-sidebar.html">Categories Grid Sidebar</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/product-details.html">Prodcut Details 01</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/product-details2.html">Prodcut Details 02</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/product-details3.html">Prodcut Details 03</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/shopping-cart.html">Shopping Cart 01</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/shopping-cart2.html">Shopping Cart 02</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="resources/empty-cart.html">Empty Cart</a></li>
-                                    </ul>
+                                    
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">lookbook</a></li>
                                 <li class="nav-item"><a class="nav-link" href="resources/contact.html">Contact</a></li>
                             </ul>
                             <ul class="navbar-nav justify-content-end">
