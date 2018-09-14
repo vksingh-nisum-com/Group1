@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.nisum.dao.ShippingDetails" table="SHIPPINGDETAILS">
+		<id name="id" type="int" column="ID">
+			<generator class="assigned" />
+		</id>
+		<property name="country">
+			<column name="COUNTRY" />
+		</property>		
+		<property name="firstName">
+			<column name="FIRSTNAME" />
+		</property>
+		<property name="lastName">
+			<column name="LASTNAME"/>
+		</property>
+		<property name="address" >
+			<column name="ADDRESS" />
+		</property>
+		<property name="city" >
+			<column name="CITY" />
+		</property>
+		<property name="email" >
+			<column name="EMAIL" />
+		</property>
+		<property name="phone" >
+			<column name="PHONE" />
+		</property>
+		
+	</class>
+</hibernate-mapping>

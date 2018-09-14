@@ -14,10 +14,14 @@ dependencies {
 compile 'org.springframework:spring-webmvc:5.0.8.RELEASE'
 compile 'javax.servlet:jstl:1.2'
 compile 'javax.servlet:javax.servlet-api:4.0.1'
-compile 'org.springframework:spring-core:5.0.8.RELEASE'
-compile 'org.springframework:spring-beans:5.0.8.RELEASE'
+compile 'org.springframework:spring-core:4.1.8.RELEASE'
+compile 'org.springframework:spring-context:4.1.8.RELEASE'
+
+compile 'org.springframework:spring-beans:4.1.8.RELEASE'
 compile 'mysql:mysql-connector-java:8.0.11'
 compile 'org.springframework:spring-orm:4.2.2.RELEASE'
+compile 'org.hibernate:hibernate-core:4.3.11.Final'
+compile 'org.springframework:spring-jdbc:4.1.8.RELEASE'
 testCompile 'junit:junit:4.12'
 }
 

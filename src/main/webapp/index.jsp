@@ -11,7 +11,7 @@
         
         <link rel="icon" href="resources/img/fav-icon.png" type="image/x-icon" />
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Persuit</title>
+        <title>MiniAmazon</title>
         <!-- Icon css link -->
         <link href="resources/css/font-awesome.min.css" rel="stylesheet">
         <link href="resources/vendors/line-icon/css/simple-line-icons.css" rel="stylesheet">
@@ -48,10 +48,10 @@
                         <div class="top_header_left">
                             <div class="selector">
                                 <select class="language_drop" name="countries" id="countries" style="width:300px;">
-                                  <option value='yt' data-image="img/icon/flag-1.png" data-imagecss="flag yt" data-title="English">English</option>
-                                  <option value='yu' data-image="img/icon/flag-1.png" data-imagecss="flag yu" data-title="Bangladesh">Bangla</option>
-                                  <option value='yt' data-image="img/icon/flag-1.png" data-imagecss="flag yt" data-title="English">English</option>
-                                  <option value='yu' data-image="img/icon/flag-1.png" data-imagecss="flag yu" data-title="Bangladesh">Bangla</option>
+                                  <option value='yt' data-image="resources/img/icon/flag-1.png" data-imagecss="flag yt" data-title="English">English</option>
+                                  <option value='yu' data-image="resources/img/icon/flag-1.png" data-imagecss="flag yu" data-title="Bangladesh">Bangla</option>
+                                  <option value='yt' data-image="resources/img/icon/flag-1.png" data-imagecss="flag yt" data-title="English">English</option>
+                                  <option value='yu' data-image="resources/img/icon/flag-1.png" data-imagecss="flag yu" data-title="Bangladesh">Bangla</option>
                                 </select>
                             </div>
                             <select class="selectpicker usd_select">
@@ -71,7 +71,7 @@
                         <div class="top_header_middle">
                             <a href="#"><i class="fa fa-phone"></i> Call Us: <span>+84 987 654 321</span></a>
                             <a href="#"><i class="fa fa-envelope"></i> Email: <span>support@yourdomain.com</span></a>
-                            <img src="resources/img/logo.png" alt="">
+                            <img src="resources/img/amazon.png" alt="">
                         </div>
                     </div>
                     <div class="col-lg-3">
@@ -105,7 +105,7 @@
         <header class="shop_header_area">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand" href="#"><img src="resources/img/logo.png" alt=""></a>
+                    <a class="navbar-brand" href="#"><img src="resources/img/amazon.png" alt=""></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
@@ -113,61 +113,34 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav categories">
                             <li class="nav-item">
-                                <select class="selectpicker">
-                                    <option>Categories</option>
-                                    <option>Categories 2</option>
-                                    <option>Categories 3</option>
+                                <select class="selectpicker"  >
+                                  <option value=a href="#" >Catagories</a></option>
+                                   <option value=a href="#" >Electronics</a></option>
+                                    <option value=a href="sports.jsp" >sports</a></option>
                                 </select>
                             </li>
                         </ul>
-                        <ul class="navbar-nav">
+                       <ul class="navbar-nav">
                             <li class="nav-item dropdown submenu active">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                <a class="nav-link dropdown-toggle" href="index.jsp" >
+                                Home 
                                 </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="resources/index.html">Home Simple</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="resources/home-carousel.html">Home Carousel</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="resources/home-fullwidth.html">Home Full Width</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="resources/home-parallax.html">Home Parallax</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="resources/home-sidebar.html">Home Boxed</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="resources/home-fixed-menu.html">Home Fixed</a></li>
-                                </ul>
+                                
                             </li>
                             <li class="nav-item dropdown submenu">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Pages <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                <a class="nav-link dropdown-toggle" href="login.jsp" >Signup
+
                                 </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="resources/compare.html">Compare</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="resources/checkout.html">Checkout Method</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="resources/register.html">Checkout Register</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="resources/track.html">Track</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="resources/login.html">Login</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="resources/404.html">404</a></li>
-                                </ul>
+                                
                             </li>
                             <li class="nav-item dropdown submenu">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Shop <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                <a class="nav-link dropdown-toggle" href="login.jsp">Login
+
                                 </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="resources/categories-no-sidebar-2column.html">Prodcut No Sidebar</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="resources/categories-no-sidebar-3column.html">Prodcut Two Column</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="resources/categories-no-sidebar-4column.html">Product Grid</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="resources/categories-left-sidebar.html">Categories Left Sidebar</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="resources/categories-right-sidebar.html">Categories Right Sidebar</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="resources/categories-grid-left-sidebar.html">Categories Grid Sidebar</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="resources/product-details.html">Prodcut Details 01</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="resources/product-details2.html">Prodcut Details 02</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="resources/product-details3.html">Prodcut Details 03</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="resources/shopping-cart.html">Shopping Cart 01</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="resources/shopping-cart2.html">Shopping Cart 02</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="resources/empty-cart.html">Empty Cart</a></li>
-                                </ul>
+                                
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">lookbook</a></li>
+                            
+                            
                             <li class="nav-item"><a class="nav-link" href="resources/contact.html">Contact</a></li>
                         </ul>
                     </div>
@@ -201,7 +174,7 @@
                                 data-responsive_offset="on" 
                                 data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
                                 data-textAlign="['left','left','left','left','left','center']"
-                                style="z-index: 8;font-family: Montserrat,sans-serif;font-weight:700;color:#29263a;"><img src="resources/img/home-slider/2017-text.png" alt=""></div>
+                                style="z-index: 8;font-family: Montserrat,sans-serif;font-weight:700;color:#29263a;"><img src="resources/img/home-slider/2018.png" alt=""></div>
 
                                 <div class="tp-caption tp-resizeme secand_text" 
                                     data-x="['right','right','right','center','center',]" 
@@ -257,7 +230,7 @@
                                 data-responsive_offset="on" 
                                 data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
                                 data-textAlign="['left','left','left','left','left','center']"
-                                style="z-index: 8;font-family: Montserrat,sans-serif;font-weight:700;color:#29263a;"><img src="resources/img/home-slider/2017-text.png" alt=""></div>
+                                style="z-index: 8;font-family: Montserrat,sans-serif;font-weight:700;color:#29263a;"><img src="resources/img/home-slider/2018.png" alt=""></div>
 
                                 <div class="tp-caption tp-resizeme secand_text" 
                                     data-x="['right','right','right','center','center',]" 
@@ -273,7 +246,7 @@
                                     data-transform_idle="o:1;"
                                     data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
                                     data-textAlign="['left','left','left','left','left','center']"
-                                    >Best Summer <br />Collection 
+                                    >Best Diwali <br />Collection 
                                 </div>
 
                                 <div class="tp-caption tp-resizeme third_btn" 
@@ -755,7 +728,7 @@
                                 <div class="f_blog_text">
                                     <h5>fashion</h5>
                                     <p>Neque porro quisquam est qui dolorem ipsum</p>
-                                    <h6>21.09.2017</h6>
+                                    <h6>13.09.2018</h6>
                                 </div>
                             </div>
                         </div>
@@ -765,7 +738,7 @@
                                 <div class="f_blog_text">
                                     <h5>fashion</h5>
                                     <p>Neque porro quisquam est qui dolorem ipsum</p>
-                                    <h6>21.09.2017</h6>
+                                    <h6>13.09.2018</h6>
                                 </div>
                             </div>
                         </div>
@@ -775,7 +748,7 @@
                                 <div class="f_blog_text">
                                     <h5>fashion</h5>
                                     <p>Neque porro quisquam est qui dolorem ipsum</p>
-                                    <h6>21.09.2017</h6>
+                                    <h6>13.09.2018</h6>
                                 </div>
                             </div>
                         </div>
@@ -792,8 +765,8 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-6">
                             <aside class="f_widget f_about_widget">
-                                <img src="resources/img/logo.png" alt="">
-                                <p>Persuit is a Premium PSD Template. Best choice for your online store. Let purchase it to enjoy now</p>
+                                <    img src="resources/img/amazon.png" alt="">
+                                <p>MiniAmazon is a Premium e-commerce website. Best choice for your online store. Lets purchase it to enjoy now</p>
                                 <h6>Social:</h6>
                                 <ul>
                                     <li><a href="#"><i class="social_facebook"></i></a></li>
