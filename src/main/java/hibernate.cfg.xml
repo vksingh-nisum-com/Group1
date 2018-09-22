@@ -14,5 +14,11 @@
           <property name="format_sql">true</property>
           <property name="hbm2ddl.auto">update</property>
           <mapping resource="appuser.hbm.xml" /> 
+           <mapping resource="cartitem.hbm.xml" /> 
+           <mapping resource="shipping.hbm.xml" />           
+           <mapping resource="product.hbm.xml" /> 
+           <mapping resource="order1.hbm.xml" />  
+           
+                     
     </session-factory>
 </hibernate-configuration>

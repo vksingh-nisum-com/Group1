@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.nisum.dao.Order1" table="ORDER1">
+		<id name="orderId" type="int" column="ORDERID">
+			<generator class="assigned" />
+		</id>
+		<property name="userName">
+			<column name="USERNAME" />
+		</property>		
+		<property name="amount">
+			<column name="AMOUNT" />
+		</property>
+		<property name="date">
+			<column name="DATE"/>
+		</property>
+		<property name="orderDetail" >
+			<column name="ORDERDETAIL" />
+		</property>
+		
+	</class>
+</hibernate-mapping>

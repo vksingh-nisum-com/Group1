@@ -1,7 +1,7 @@
 package com.nisum.dao;
 import javax.persistence.*;
 @Entity
-@Table(name = "user")
+@Table(name = "USER")
 public class User {
 	@Id @GeneratedValue
 	@Column(name = "ID")

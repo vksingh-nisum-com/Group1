@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.nisum.dao.Product" table="PRODUCT">
+		<id name="id" type="int" column="ID">
+			<generator class="assigned" />
+		</id>
+		<property name="pId">
+			<column name="PID" />
+		</property>		
+		<property name="name">
+			<column name="NAME" />
+		</property>
+		<property name="price">
+			<column name="PRICE"/>
+		</property>
+		<property name="descrip" >
+			<column name="DESCRIP" />
+		</property>
+		<property name="img" >
+			<column name="IMG" />
+		</property>
+		<property name="img2" >
+			<column name="IMG2" />
+		</property>
+		<property name="img3" >
+			<column name="IMG3" />
+		</property>
+		<property name="img4" >
+			<column name="IMG4" />
+		</property>
+		<property name="img5" >
+			<column name="IMG5" />
+		</property>
+		<property name="quantity" >
+			<column name="QUANTITY" />
+		</property>
+		<property name="catagory" >
+			<column name="CATAGORY" />
+		</property>
+		<property name="subCatagory" >
+			<column name="SUBCATAGORY" />
+		</property>	
+	</class>
+</hibernate-mapping>
