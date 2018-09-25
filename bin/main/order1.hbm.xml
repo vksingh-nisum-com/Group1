@@ -3,7 +3,7 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<class name="com.nisum.dao.Order1" table="ORDER1">
+	<class name="com.nisum.entity.Order1" table="ORDER1">
 		<id name="orderId" type="int" column="ORDERID">
 			<generator class="assigned" />
 		</id>

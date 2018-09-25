@@ -12,9 +12,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.nisum.dao.CartItem;
-import com.nisum.dao.Order1;
-import com.nisum.dto.DatabaseConnector;
+import com.nisum.dao.DatabaseConnector;
+import com.nisum.entity.CartItem;
+import com.nisum.entity.Order1;
 @Controller
 public class AdminViewAllOrdersController {
 	@RequestMapping("/viewAllOrders")

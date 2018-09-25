@@ -1,4 +1,4 @@
-package com.nisum.dao;
+package com.nisum.entity;
 public class Order1 {
 	private int orderId;
 	private String userName; // Similar to userId in CartItems and Sessions

@@ -14,16 +14,18 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
-import com.nisum.dao.Product;
-import com.nisum.dto.DatabaseConnector;
+import com.nisum.dao.DatabaseConnector;
+import com.nisum.entity.Product;
 
 @Controller
 public class AdminAddQuantityToProduct {
 	
 	@RequestMapping("/adminAddQuantity")
-	public void add(HttpServletRequest request,HttpServletResponse response) throws IOException{
+	public ModelAndView add(HttpServletRequest request,HttpServletResponse response) throws IOException{
 		String pid=request.getParameter("pid");
+		ModelAndView mv=new ModelAndView();
 		int quantity =Integer.parseInt(request.getParameter("P_Quantity"));
 		
 
@@ -42,8 +44,14 @@ public class AdminAddQuantityToProduct {
 		String result=String.valueOf(Integer.parseInt(product.getQuantity())+quantity);
 		boolean statusforadd=dbcon.updateProductByPID(pid,result);
 		if(statusforadd) {
+			 mv.setViewName("admin");
+			 mv.addObject("adminMessage2", "Updated !");
 			System.out.println("product  quantity is  updated...ie... added");
+			 return mv;
 		}
+		 mv.setViewName("admin");
+		 mv.addObject("adminMessage2", "Something Went Wrong!");
+		 return mv;
 		
 		
 		

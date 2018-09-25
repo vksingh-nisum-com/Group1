@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.nisum.dao.Product;
-import com.nisum.dto.DatabaseConnector;
+import com.nisum.dao.DatabaseConnector;
+import com.nisum.entity.Product;
 import com.nisum.services.UserServices;
 
 
@@ -25,7 +25,7 @@ import com.nisum.services.UserServices;
 public class AdminAddProductController {
 
 	@RequestMapping(value = "/adminAddProduct", method = RequestMethod.POST )
-	public void addNewProduct(HttpServletRequest request,HttpServletResponse response, @RequestParam CommonsMultipartFile fileImage1,@RequestParam CommonsMultipartFile fileImage2,@RequestParam CommonsMultipartFile fileImage3,@RequestParam CommonsMultipartFile fileImage4,@RequestParam CommonsMultipartFile fileImage5) throws IOException 
+	public ModelAndView addNewProduct(HttpServletRequest request,HttpServletResponse response, @RequestParam CommonsMultipartFile fileImage1,@RequestParam CommonsMultipartFile fileImage2,@RequestParam CommonsMultipartFile fileImage3,@RequestParam CommonsMultipartFile fileImage4,@RequestParam CommonsMultipartFile fileImage5) throws IOException 
 	{
 	
 		
@@ -118,11 +118,17 @@ public class AdminAddProductController {
 	 boolean status=dbcon.createNewProduct(product);
 	 PrintWriter out=response.getWriter();
 	 if(status) {
+		 mv.setViewName("admin");
+		 mv.addObject("adminMessage", "added Successful !");
 		 System.out.println("product saved by admin....................................################");
 		 out.println("saved to database...................###################");
+		 return mv;
 	 }
 	 else {
 		 System.out.println("Product not saved by admin........******$######################");
+		 mv.setViewName("admin");
+		 mv.addObject("adminMessage", "Something Went Wrong!");
+		 return mv;
 	 }
 	}
 }

@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" import="java.util.*,com.nisum.dao.*"%>
+    pageEncoding="ISO-8859-1" import="java.util.*,com.nisum.entity.*"%>
       
 <!DOCTYPE html>
 <html>

@@ -1,4 +1,4 @@
-package com.nisum.dao;
+package com.nisum.entity;
 import javax.persistence.*;
 @Entity
 @Table(name = "USER")

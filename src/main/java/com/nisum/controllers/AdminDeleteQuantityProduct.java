@@ -14,9 +14,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
-import com.nisum.dao.Product;
-import com.nisum.dto.DatabaseConnector;
+import com.nisum.dao.DatabaseConnector;
+import com.nisum.entity.Product;
 
 
 
@@ -25,12 +26,13 @@ import com.nisum.dto.DatabaseConnector;
 public class AdminDeleteQuantityProduct {
 	
 	@RequestMapping("adminDeleteQuantity")
-	public void add(HttpServletRequest request,HttpServletResponse response) throws IOException{
+	public ModelAndView add(HttpServletRequest request,HttpServletResponse response) throws IOException{
 		
 		String pid=request.getParameter("pid");
 		int quantity =Integer.parseInt(request.getParameter("P_Quantity"));
 		DatabaseConnector dbcon=new DatabaseConnector();
-		
+		ModelAndView mv=new ModelAndView();
+
 		
 		/*
 		 * 
@@ -63,11 +65,32 @@ public class AdminDeleteQuantityProduct {
 			boolean status=dbcon.updateProductByPID(pid, resultString);
 			if(status) {
 				System.out.println("quantity removed successfully");
+				
+				
+				 mv.setViewName("admin");
+				 mv.addObject("adminMessage2", "Updated !");
+				//System.out.println(" the product");
+				 return mv;
 			}
 			else {
-				System.out.println("quantity removed successfully");
+				System.out.println("Sommething Went Wrong !!");
+				
+				 mv.setViewName("admin");
+				 mv.addObject("adminMessage2", " Sommething Went Wrong !!");
+				 //System.out.println("admin has deleted the product");
+				 return mv;
 
 			}
+		}
+			else {
+			
+
+			 mv.setViewName("admin");
+			 mv.addObject("adminMessage2", " Quantity is 0 or less!!");
+			 //System.out.println("admin has deleted the product");
+			 return mv;
+			
+			
 		}
 		
 		

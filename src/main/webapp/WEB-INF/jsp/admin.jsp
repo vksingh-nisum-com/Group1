@@ -1,230 +1,89 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" import="java.util.*,com.nisum.dao.*"%>
+    pageEncoding="ISO-8859-1" isELIgnored="false" import="java.util.*,com.nisum.entity.*"%>
  <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Admin Page</title>
-
-<style type="text/css">
-
-.containerFlex
-  {
-      display:flex;
-      justify-content: space-around;
-  }
-  body 
-  { 
-  background-image : url("resources/img/icon/Ap.jpg");
-  background-size: cover;
-    background-repeat: no-repeat;
-  }
-  h3
-  {
-  color : white;
-  }
-  
-  .button{
-  border : 0px;
-  color : white;
-  background-color:#4c0e06;
-  }
-  h1
-  {
-  color : white;
-  }
-</style>
-
+	<title>Admin Home</title>
+	<link rel="stylesheet" type="text/css" href="resources//css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="resources//css/testbootstyle.css">
 </head>
 <body>
-<%List<Product> products=(List<Product>)request.getAttribute("products"); request.getAttribute("products"); %>
 
-<h1 align="center">Welcome Admin</h1>
-	<section class="containerFlex">
-		<div>
-			<h3>Add Product</h3>
-		 <form class="login_form row" onsubmit="return validate(this)"  method="post" action="adminAddProduct" enctype="multipart/form-data" >
-							<div class="col-lg-12 form-group">
-								<input class="form-control" type="text" placeholder="ProductID" 
-									name="P_ID" id=""P_ID">
-									<div id="div1"></div>
-							</div>
-							<br>
-							<div class="col-lg-12 form-group">
-								<input class="form-control" type="text"
-									placeholder="ProductQuantity" name="P_Quantity" id="P_Quantity">
-									<div id="div2"></div>
-							</div>
-							<br>
-							<div class="col-lg-12 form-group">
-								<input class="form-control" type="text" placeholder="Name"
-									name="Name" id="Name">
-									<div id="div3"></div>
-							</div>
-							<br>
-							<div class="col-lg-12 form-group">
-								<input class="form-control" type="text" placeholder="Price"
-									name="Price" id="Price">
-									<div id="div4"></div>
-							</div>
-							<br>
-							<div class="col-lg-12 form-group">
-								<input class="form-control" type="text"
-									placeholder="Description" name="Descriptiony" id="Descriptiony">
-									<div id="div5"></div>
-							</div>
-							<br>
-							<div class="col-lg-12 form-group">
-								<input class="form-control" type="text" placeholder="Category"
-									name="Category" id="Category">
-									<div id="div11"></div>
-							</div>
-							<br>
-							<div class="col-lg-12 form-group">
-								<input class="form-control" type="text"
-									placeholder="Sub-Category" name="Sub-Category" id="Sub-Category">
-									<div id="div12"></div>
-							</div>
-							<br>
-							<div class="col-lg-12 form-group">
-								<div class="creat_account">
-									<!--   <input type="checkbox" id="f-option" name="selector">
-                                        <label for="f-option">Keep me logged in</label> -->
-									<div class="check"></div>
-								</div>
-							</div>
-							<br>
-							<div class="col-lg-12 form-group">
-								<input class="form-control" type="file" placeholder="Image1"
-									name="fileImage1" id="Image1">
-									<div id="div6"></div>
-							</div>
-							<br>
-							<div class="col-lg-12 form-group">
-								<input class="form-control" type="file" placeholder="Image2"
-									name="fileImage2" id="Image2">
-									<div id="div7"></div>
-							</div>
-							<br>
-							<div class="col-lg-12 form-group">
-								<input class="form-control" type="file" placeholder="Image3"
-									name="fileImage3" id="Image3">
-									<div id="div8"></div>
-							</div>
-							<br>
-							<div class="col-lg-12 form-group">
-								<input class="form-control" type="file" placeholder="Image4"
-									name="fileImage4" id="Image4">
-									<div id="div9"></div>
-							</div>
-							<br>
-							<div class="col-lg-12 form-group">
-								<input class="form-control" type="file" placeholder="Image5"
-									name="fileImage5" id="Image5">
-									<div id="div10"></div>
-							</div>
-							<br>
-							<div class="col-lg-6 form-group">
-						<button type="submit" value="submit"
-									class="button">Add Product</button>
-							</div>
-							</form>
-		</div>
+
+
+
+            <h3 class="faded">
+             Hi, there Admin. Welcome to nisum Mall administration page.
+            </h3>
+		<div class="containerfluid">
+
+					<div class="card" style="width: 18rem;" style="display: inline">
+			  <img class="card-img-top" src="resources//img/admin1.jpg" class="figure-img img-fluid rounded" alt="win img" height="250px" width="300px" alt="Card image cap">
+			  <div class="card-body">
+			    <h5 class="card-title">Add Products</h5>
+			    <p class="card-text">Make your store bigger.</p>
+			    <h5 style="color:red"> ${ adminMessage } </h5>
+			    
+			    
+			    <form action="form1Ctrl">
+			    <button type="submit" class="btn btn-primary">Add</button>
+			    </form>
+			   <!-- <a href="adminForm1" class="btn btn-primary">Add</a>  -->
+			  </div>
+			</div>
+
+
+			  <div class="card" style="width: 18rem;" style="display: inline">
+			  <img class="card-img-top" src="resources//img/admin2.jpg" class="figure-img img-fluid rounded" alt="win img" height="250px" width="200px" alt="Card image cap">
+			  <div class="card-body">
+			    <h5 class="card-title">Delete Product</h5>
+			    <p class="card-text">Remove product from inventory.</p>
+			    <h5 style="color:red"> ${ adminMessage1 } </h5>
+			    
+			   <form action="form2Ctrl">
+			    <button type="submit" class="btn btn-primary">Delete</button>
+			    </form>
+			  </div>
+			</div>
+			  <div class="card" style="width: 18rem;" style="display: inline">
+			  <img class="card-img-top" src="resources//img/admin3.jpg" class="figure-img img-fluid rounded" alt="win img" height="250px" width="300px" alt="Card image cap">
+			  <div class="card-body">
+			    <h5 class="card-title">Update Products</h5>
+			    <p class="card-text">Update product's quantity</p>
+			    
+			    <h5 style="color:red"> ${ adminMessage2 } </h5>
+
+			    
+			    
+			   <form action="form3Ctrl">
+			    <button type="submit" class="btn btn-primary">Update</button>
+			    </form>
+			  </div>
+			</div>
+			 
 		
-		<div>
-		<h3>Delete Product</h3>
-		    <div>
-		    	<form class="form2" action="adminDeleteProduct">
-					   
-					   <select>
-                               <% for(Product product:products ){ 	String pid=product.getpId();  %>	
-       												<option><%out.print(pid); %></option>
-                              		<% }%>
-									
-						</select>	
-						<br>
-						<br>
-									<div class="col-lg-2 form-group">
-								<button type="submit" value="submit"
-									class="button">Delete Product</button>
-							       </div>
-                           
-                  </form>
-		    </div>
-		    <hr>						
-		    <br>
-		    <br>
-		    
-		     				<div> 
-		     				<h3>Add Quality</h3>
-                               <form class="form3" action="adminAddQuantity">
-                            
-                               <select>
-                               <% for(Product product:products ){ 	String pid=product.getpId();  %>	
-       												<option><%out.print(pid); %></option>
-                              		<% }%>
-									
-						</select>
-						<br>
-						<br>
-									<div class="col-lg-14 form-group">
-								<input class="form-control" type="text"
-									placeholder="ProductQuantity" name="P_Quantity" id="P_Quantity">
-									<div id="div2"></div>
-							</div>
-							<br>
-									<div class="col-lg-7 form-group">
 
-								<button type="submit" value="submit"
-									class="button">Add Quantity</button>
-							</div>
-                            </form>
-                            </div>
-                            
-                           
-			<hr>						
-		    <br>
-		    <br>
-		    
-                            <div>
-                            <h3>Delete Quantity</h3>
-                            <form class="form4" action="adminDeleteQuantity">
-                            
-                               <select>
-                               <% for(Product product:products ){ 	String pid=product.getpId();  %>	
-       												<option><%out.print(pid); %></option>
-                              		<% }%>
-									
-						</select>
-						<br>
-						<br>
-									
-									
-									<div class="col-lg-14 form-group">
-								<input class="form-control" type="text"
-									placeholder="ProductQuantity" name="P_Quantity" id="P_Quantity">
-									
-									</div>
-									<br>
-									<div class="col-lg-7 form-group">
+		<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="resources//img/admin4.jpg" class="figure-img img-fluid rounded" alt="win img" height="250px" width="300px" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">View All Orders</h5>
+    <p class="card-text">View all orders and deliver easily. </p>
+   <form action="viewAllOrders">
+			    <button type="submit" class="btn btn-primary">View</button>
+	</form>
+  </div>
+</div>
+</div>
 
-								<button type="submit" value="submit"
-									class="button">Delete Quantity</button>
-							</div>
-									
-                            </form>
-                            </div>
-                      <div>
-                          	<form action="viewAllOrders">
-	
-							<input type="submit" value="View all orders">
-							</form>
-                          </div>
-									
-		
-		</div>
-	
-	</section>
+
+
+
+	<blockquote class="blockquote text-center">
+  <p class="mb-0">"There is only one boss; the customer. And he can fire everybody in the company from the chairman on down, simply by spending his money somewhere else."</p>
+  <footer class="blockquote-footer">Sam Walton, Founder of Walmart </footer>
+</blockquote>
+
+
 </body>
 </html>

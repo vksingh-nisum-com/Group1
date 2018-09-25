@@ -1,0 +1,56 @@
+body{ 
+	 font-family: 'Montserrat', sans-serif;
+	background-position: center;
+  /*background-image: url("../images/shoes.jpg");*/
+  /*background-repeat:no-repeat;*/
+  background-size: cover;
+  background-color: black;
+  height: 100%; 
+
+ 
+}
+
+label{color: white;}
+
+.faded {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+blockquote{color: white}
+
+.containerfluid{
+		margin-left: 60px;
+	    display: -webkit-box;
+}
+
+.btn.btn-primary{background-color: #6A0000}
+div.card{
+	width: 600px;
+	height: 400px;
+	margin: 10px;
+	transition: all 1s;
+}
+
+div.card:hover {
+	transform: scale(1.1);
+}
+
+.mar_Up{margin-top: 50px;background-color: #6A0000}
+
+.carousel-inner{
+	margin-left: 300px;
+	max-width: 400px;
+max-height: 100px;
+}
+.myFlex{display: flex;
+		justify-content: space-around;}
+
+
+
+
+
+
+
+
+

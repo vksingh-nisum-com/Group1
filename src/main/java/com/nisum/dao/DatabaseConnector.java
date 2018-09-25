@@ -1,4 +1,4 @@
-package com.nisum.dto;
+package com.nisum.dao;
 
 import java.util.Iterator;
 import java.util.List;
@@ -6,12 +6,12 @@ import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
-import com.nisum.dao.CartItem;
-import com.nisum.dao.Order;
-import com.nisum.dao.Order1;
-import com.nisum.dao.Product;
-import com.nisum.dao.ShippingDetails;
-import com.nisum.dao.User;
+import com.nisum.entity.CartItem;
+import com.nisum.entity.Order;
+import com.nisum.entity.Order1;
+import com.nisum.entity.Product;
+import com.nisum.entity.ShippingDetails;
+import com.nisum.entity.User;
 import com.nisum.util.HibernateUtil;
 
 public class DatabaseConnector {

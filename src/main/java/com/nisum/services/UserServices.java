@@ -14,13 +14,13 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-import com.nisum.dao.CartItem;
-import com.nisum.dao.Order;
-import com.nisum.dao.Order1;
-import com.nisum.dao.Product;
-import com.nisum.dao.ShippingDetails;
-import com.nisum.dao.User;
-import com.nisum.dto.DatabaseConnector;
+import com.nisum.dao.DatabaseConnector;
+import com.nisum.entity.CartItem;
+import com.nisum.entity.Order;
+import com.nisum.entity.Order1;
+import com.nisum.entity.Product;
+import com.nisum.entity.ShippingDetails;
+import com.nisum.entity.User;
 
 public class UserServices {
 	public User setValues(String fullname,String username, String email,String password,String phone) {

@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" isELIgnored="false" import= "java.util.*,com.nisum.dao.*"  %>
+    pageEncoding="ISO-8859-1" isELIgnored="false" import= "java.util.*,com.nisum.entity.*"  %>
     
 <jsp:include page="simpleHeader.jsp"></jsp:include>
 
