@@ -40,7 +40,7 @@
                						 
                						 
                                          <tr>
-                                           <form action="adminViewOrderDetailCtrl">
+                                           <form action="userViewOrderDetailCtrl">
                                             <input type="hidden" name="orderId" value="<%out.print(orderId); %>">
                                             <input type="hidden" name="userName" value="<%out.print(userName); %>">
                                             <input type="hidden" name="orderDetail" value="<%out.print(orderDetail); %>">

@@ -15,6 +15,18 @@ import com.nisum.services.UserServices;
 
 @Controller
 public class RegisterHandler {
+	@RequestMapping("/")
+	public String home() {
+		return "index";
+	}
+	@RequestMapping("contact")
+	public String contact() {
+		return "contact";
+	}
+	@RequestMapping("forgotPassword")
+	public String forgotPassword() {
+		return "forgotPassword";
+	}
 	@RequestMapping("/registerProcess")
 	public ModelAndView register(HttpServletRequest request,HttpServletResponse response) throws IOException {
 		ModelAndView mv=new ModelAndView();

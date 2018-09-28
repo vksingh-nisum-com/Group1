@@ -19,7 +19,7 @@
 		<div class="containerfluid">
 
 					<div class="card" style="width: 18rem;" style="display: inline">
-			  <img class="card-img-top" src="resources//img/admin1.jpg" class="figure-img img-fluid rounded" alt="win img" height="250px" width="300px" alt="Card image cap">
+			  <img class="card-img-top" src="resources//img/admin21.jpg" class="figure-img img-fluid rounded" alt="win img" height="250px" width="300px" alt="Card image cap">
 			  <div class="card-body">
 			    <h5 class="card-title">Add Products</h5>
 			    <p class="card-text">Make your store bigger.</p>

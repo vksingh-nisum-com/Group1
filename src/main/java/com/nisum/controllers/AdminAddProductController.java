@@ -27,83 +27,15 @@ public class AdminAddProductController {
 	@RequestMapping(value = "/adminAddProduct", method = RequestMethod.POST )
 	public ModelAndView addNewProduct(HttpServletRequest request,HttpServletResponse response, @RequestParam CommonsMultipartFile fileImage1,@RequestParam CommonsMultipartFile fileImage2,@RequestParam CommonsMultipartFile fileImage3,@RequestParam CommonsMultipartFile fileImage4,@RequestParam CommonsMultipartFile fileImage5) throws IOException 
 	{
-	
-		
-	
 		ModelAndView mv=new ModelAndView();
-	
+		UserServices userObj=new UserServices();
+
 	String fileName1 = fileImage1.getOriginalFilename(); 
 	String fileName2 = fileImage2.getOriginalFilename(); 
 	String fileName3 = fileImage3.getOriginalFilename(); 
 	String fileName4 = fileImage4.getOriginalFilename(); 
 	String fileName5 = fileImage5.getOriginalFilename(); 
-	
-	//set in db filename1.jpg
-
-	
-	if (!fileImage1.isEmpty()) 
-	{
-	BufferedImage image = ImageIO.read(new ByteArrayInputStream(fileImage1.getBytes()));
-	String path="C:/opt/product_details/"+fileName1;
-	File destination = new File(path); 
-	ImageIO.write(image,"jpg",destination);
-	
-	String path2="F:/Group11/src/main/webapp/resources/img/product/product-details/"+fileName1;
-	File destination2 = new File(path2); 
-	ImageIO.write(image,"jpg",destination2);
-	String path3="F:/Group11/src/main/webapp/resources/img/product/two-column/"+fileName1;
-	File destination3 = new File(path3); 
-	ImageIO.write(image,"jpg",destination3);
-	}
-	if (!fileImage2.isEmpty()) 
-	{
-	BufferedImage image = ImageIO.read(new ByteArrayInputStream(fileImage2.getBytes()));
-	String path="C:/opt/product_details/"+fileName2;
-	File destination = new File(path); 
-	ImageIO.write(image,"jpg",destination);
-	
-	String path2="C:/Users/Nisum/Desktop/Group11/src/main/webapp/resources/img/product/product-details/"+fileName2;
-	File destination2 = new File(path2); 
-	ImageIO.write(image,"jpg",destination2);
-	}
-	
-	if (!fileImage3.isEmpty()) 
-	{
-	BufferedImage image = ImageIO.read(new ByteArrayInputStream(fileImage3.getBytes()));
-	String path="C:/opt/product_details/"+fileName3;
-	File destination = new File(path); 
-	ImageIO.write(image,"jpg",destination);
-	
-	String path2="C:/Users/Nisum/Desktop/Group11/src/main/webapp/resources/img/product/product-details/"+fileName3;
-	File destination2 = new File(path2); 
-	ImageIO.write(image,"jpg",destination2);
-	}
-	
-	if (!fileImage4.isEmpty()) 
-	{
-	BufferedImage image = ImageIO.read(new ByteArrayInputStream(fileImage4.getBytes()));
-	String path="C:/opt/product_details/"+fileName4;
-	File destination = new File(path); 
-	ImageIO.write(image,"jpg",destination);
-	
-	String path2="C:/Users/Nisum/Desktop/Group11/src/main/webapp/resources/img/product/product-details/"+fileName4;
-	File destination2 = new File(path2); 
-	ImageIO.write(image,"jpg",destination2);
-	}
-	
-	if (!fileImage5.isEmpty()) 
-	{
-	BufferedImage image = ImageIO.read(new ByteArrayInputStream(fileImage5.getBytes()));
-	String path="C:/opt/product_details/"+fileName5;
-	File destination = new File(path); 
-	ImageIO.write(image,"jpg",destination);
-	
-	String path2="C:/Users/Nisum/Desktop/Group11/src/main/webapp/resources/img/product/product-details/"+fileName5;
-	File destination2 = new File(path2); 
-	ImageIO.write(image,"jpg",destination2);
-	}
-	
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
+    userObj.setImages(fileImage1,fileImage2,fileImage3,fileImage4,fileImage5,fileName1,fileName2,fileName3,fileName4,fileName5);
 	String pid =request.getParameter("P_ID");
 	String productQuantity=request.getParameter("P_Quantity");
 	String productDecription =request.getParameter("Name"); //CAUTION:::::::::::::::=>>>>>>
@@ -114,7 +46,6 @@ public class AdminAddProductController {
 	UserServices us=new UserServices();
 	 Product product=us.setValuesToProduct(pid,productName,productPrice,productDecription,fileName1,fileName2,fileName3,fileName3,fileName4,fileName5,productQuantity,productCategory,productSubCategory);
 	 DatabaseConnector dbcon=new DatabaseConnector();
-	 
 	 boolean status=dbcon.createNewProduct(product);
 	 PrintWriter out=response.getWriter();
 	 if(status) {
@@ -132,66 +63,3 @@ public class AdminAddProductController {
 	 }
 	}
 }
-
-	
-	
-	
-	/*
-	 * Save to DB
-	 * 
-	 * 1. Create Product prod; object
-	 * 2. set values
-	 * 3. save to product Table
-	 * 
-	 */
-	
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
-	
-	
-	
-	
-
-
-	
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-
-
-

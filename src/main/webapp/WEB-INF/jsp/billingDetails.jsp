@@ -25,19 +25,11 @@
                         <div class="col-lg-7">
                             <div class="billing_details">
                                 <h2 class="reg_title">Shipping Details</h2>
-                                 <form action="placeOrder" onsubmit="return validate(this)" method="get">
-                                    
+                                 <form action="placeOrder" onsubmit="return validate(this)" method="get">    
                                     <div class="col-lg-12">
                                         <div class="form-group">
-                                            <label for="name">First Name <span>*</span></label>
-                                            <input type="text"  onkeyup="return checkpattern(this)" class="form-control"name="name" id="name" aria-describedby="name" placeholder="">
-                                        </div>
-                                        <div id="div1"></div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label for="last">Last Name <span>*</span></label>
-                                            <input type="text"  onkeyup="return checkpattern(this)" class="form-control"name="last" id="last" aria-describedby="last">
+                                            <label for="last">Name <span>*</span></label>
+                                            <input type="text" placeholder="name" onkeyup="return checkpattern(this)" class="form-control"name="last" id="last" aria-describedby="last">
                                         </div>
                                         <div id="div2"></div>
                                     </div>

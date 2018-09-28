@@ -42,31 +42,11 @@
         
         <!--================Menu Area =================-->
         <header class="shop_header_area carousel_menu_area">
-            <div class="carousel_top_header row m0">
-                <div class="container">
-                    <div class="carousel_top_h_inner">
-                        <div class="float-md-left">
-                            <div class="top_header_left">
-                                
-                                <select class="selectpicker usd_select">
-                                    <option>IND</option>
-                                    
-                                </select>
-                            </div>
-                        </div>
-                        <div class="float-md-right">
-                            <div class="top_header_middle">
-                                <a href="#"><i class="fa fa-phone"></i> Call Us: <span>+91 8755995854</span></a>
-                                <a href="#"><i class="fa fa-envelope"></i> Email: <span>vksingh@nisum.com</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
             <div class="carousel_menu_inner">
                 <div class="container">
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                        <a class="navbar-brand" href="index.jsp"><img src="resources/img/logonew.PNG" alt="" style="width:108px;"></a>
+                        <a class="navbar-brand" href="index.jsp"><img src="resources/img/logonew.PNG" alt="" style="width: 180px;height: 142px;"></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
 
@@ -98,7 +78,7 @@
                                     About Us
                                     </a>                               
                                 </li>                              
-                                <li class="nav-item"><a class="nav-link" href="contact.jsp">Contact Us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact">Contact Us</a></li>
                             </ul>
                             <ul class="navbar-nav justify-content-end">
                                 <p> <% if(session.getAttribute("username")!=null){out.print("Hi "+session.getAttribute("username"));} %> </p>

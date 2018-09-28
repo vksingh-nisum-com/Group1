@@ -45,49 +45,6 @@ public class AddToCartController {
 			return mv;
 		}
 	    userName=(String) session.getAttribute("username");
-
-		
-	   /*
-	    * ////////////////////////////////////////////////////////////////
-		/*
-		 * 1.  Bring User specific Cart 
-		 
-				DatabaseConnector dbcon= new DatabaseConnector();
-				List<CartItem> cartItems=dbcon.listItems();
-				
-				
-	    * 		CartItem updatedCartItem=null;
-	    *  
-	    *  2.  for(CartItem cartItems:cartItems)
-	    *  {
-	    *  	String pidInCart=cartItem.getPID();
-	    *   if(this.pid.equals(pidInCart))
-	    *   {
-	    *   	int qty1=Integer.parseInt(cartItem.getItemQuantity());
-	    *   	int qty2=Integer.parseInt(this.productQuantity);
-	    *    	
-	    *    	int qty1=qty1+qty2;
-	    *    	
-	    *    	updatedItemQuantity= String.valueOf(qty1);
-	    *    	
-	    *       cartItem.setItemQuantity(updatedItemQuantity);
-	    *       
-	    *       updatedCartItem=cartItem;
-	    *       break;
-	    *   }
-	    *  } 	   
-	    *  
-	    *  
-	    *  3. Update this item to cartItems table
-	    *  
-	    *  
-	    *  
-	    *  
-	    *  
-	    *  
-	    *  
-	    */
-		///////////////////////////////////////////////////////////////
 	    CartItem  cartitem=dbcon.getCartItemById(userName,pid);
 	    if(cartitem!=null) {
 	    	int preQty=Integer.parseInt(cartitem.getItemQuantity());
@@ -99,8 +56,6 @@ public class AddToCartController {
 	    
 	   
 	    else{
-	   
-	   
 		CartItem cartobj =UserServices.setValuesftoCart(userName, pid ,productImage,productName,productQuantity,productPrice, prodectSize );
 		PrintWriter out = res.getWriter();
 		System.out.println("before creating the db...");
